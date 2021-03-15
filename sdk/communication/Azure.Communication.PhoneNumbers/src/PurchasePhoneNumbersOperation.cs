@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using Azure.Communication.PhoneNumbers.Models;
 using Azure.Core;
 using Azure.Core.Pipeline;
 
@@ -11,7 +12,7 @@ namespace Azure.Communication.PhoneNumbers
     {
         internal PurchasePhoneNumbersOperation(ClientDiagnostics clientDiagnostics, HttpPipeline pipeline, Request request, Response response)
         {
-            _operation = new ArmOperationHelpers<Response>(this, clientDiagnostics, pipeline, request, response, OperationFinalStateVia.Location, "PurchasePhoneNumbersOperation");
+            _operation = new ArmOperationHelpers<PhoneNumberOperation>(this, clientDiagnostics, pipeline, request, response, OperationFinalStateVia.Location, "PurchasePhoneNumbersOperation");
 
             if (response.Headers.TryGetValue<string>("operation-id", out var id))
             {

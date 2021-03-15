@@ -8,7 +8,7 @@ Run `dotnet msbuild /t:GenerateCode` to generate code.
 ``` yaml
 public-clients: true
 input-file:
-    -  https://raw.githubusercontent.com/Azure/azure-rest-api-specs/1ef769ae890b5f5a952f9ba6e46e0ef6d38241da/specification/communication/data-plane/Microsoft.CommunicationServicesPhoneNumbers/stable/2021-03-07/phonenumbers.json
+    -  https://github.com/pavelprystinka/azure-rest-api-specs/blob/36ee467b56f23156015869ad7047e9193636895a/specification/communication/data-plane/Microsoft.CommunicationServicesPhoneNumbers/stable/2021-03-07/phonenumbers.json
 title: Phone numbers
 payload-flattening-threshold: 3
 ```
